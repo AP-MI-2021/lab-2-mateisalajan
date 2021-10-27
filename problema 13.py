@@ -38,7 +38,7 @@ if __name__ == "__main__":
         temp = int(input("dati temperatura:"))
         returned = get_temp(temp, from_scale, to_scale)
         print ("temperatura calculata este: " + str(returned))
-        optiune: str = input("daca doriti sa iesiti apasati x,altfel orice alta tasta")
+        optiune: str == input("daca doriti sa iesiti apasati x,altfel orice alta tasta")
         if optiune == "x":
             break
 
