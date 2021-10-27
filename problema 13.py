@@ -1,5 +1,12 @@
 #problema 13
 def get_temp(temp: float, from_scale: str, to: str):
+    '''
+    Transformă o temperatură dată într-o scară dată într-o altă scară dată
+    :param temp: temeperatura data intr-o anumita scara
+    :param from_scale: scara din care trebuie transformat
+    :param to: scara in care trebuie transformat
+    :return: temeperatura transformata in scara ceruta
+    '''
     if from_scale == 'C' :
         if to == 'F' :
             temp = temp * 1.8 + 32
