@@ -86,13 +86,36 @@ def test_get_cmmmc():
     v = [3, 17, 10, 8]
     assert (get_cmmmc(v) == 135) is False
 
+#Problema 5
+def is_palindrome(n):
+    '''
+    verifica daca un numar este palindrom
+    :param n: un numar intreg
+    :return: 1 daca numarul n este palindrom, sau o in caz contrar
+    '''
+    copie = n
+    inv = 0
+    while copie != 0:
+        cif = copie % 10
+        inv = inv * 10 + cif
+        copie = copie // 10
+    if n == inv:
+        return 1
+    return 0
+
+def test_is_palindrome():
+    assert is_palindrome(121) == 1
+    assert is_palindrome(1456) == 0
+
 if __name__ == "__main__":
     test_get_temp()
     test_get_cmmmc()
+    test_is_palindrome()
     l = []
     while True:
         optiune = input("Pentru tasta 1 continuati cu problema 13\n"
                         "Pentru tasta 2 continuati cu problema 14\n"
+                        "Pentru tasta 3 continuati cu problema 5\n"
                         "Pentru tasta x programul se va incheia:")
         if optiune == "1":
             from_scale = input("dati valoarea scarii in care va fi data temperatura,K Kelvin,C Celsius,F Farenhide")
@@ -103,6 +126,9 @@ if __name__ == "__main__":
         if optiune == "2":
             l = citireLista()
             print(get_cmmmc(l))
+        if optiune == "3":
+            n = int(input("Dati o valoare pentru n: "))
+            print(is_palindrome(n))
         if optiune == "x":
             break
 
