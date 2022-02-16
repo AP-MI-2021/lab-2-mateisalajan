@@ -120,7 +120,7 @@ if __name__ == "__main__":
         if optiune == "1":
             from_scale = input("dati valoarea scarii in care va fi data temperatura,K Kelvin,C Celsius,F Farenhide")
             to_scale = input("dati valoarea scarii in care va fi tarnsformata temperatura,K Kelvin,C Celsius,F Farenhide")
-            temp = int(input("dati temperatura:"))
+            temp = float(input("dati temperatura:"))
             returned = get_temp(temp, from_scale, to_scale)
             print("temperatura calculata este: " + str(returned))
         if optiune == "2":
